@@ -1,0 +1,8 @@
+../Core/Src/main.c:116:6:write_byte	24	static
+../Core/Src/main.c:127:6:write_max	16	static
+../Core/Src/main.c:139:6:max_init	8	static
+../Core/Src/main.c:148:6:write_string	24	static
+../Core/Src/main.c:167:5:main	16	static
+../Core/Src/main.c:222:6:SystemClock_Config	72	static
+../Core/Src/main.c:262:13:MX_GPIO_Init	40	static
+../Core/Src/main.c:295:6:Error_Handler	4	static,ignoring_inline_asm

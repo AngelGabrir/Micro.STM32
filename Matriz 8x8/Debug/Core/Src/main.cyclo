@@ -1,0 +1,8 @@
+main.c:116:6:write_byte	2
+main.c:127:6:write_max	1
+main.c:139:6:max_init	1
+main.c:148:6:write_string	3
+main.c:167:5:main	3
+main.c:222:6:SystemClock_Config	3
+main.c:262:13:MX_GPIO_Init	1
+main.c:295:6:Error_Handler	1

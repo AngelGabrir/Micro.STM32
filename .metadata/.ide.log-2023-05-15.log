@@ -1,0 +1,92 @@
+2023-05-15 17:09:00,850 [INFO] Activator:176 - 
+
+
+2023-05-15 17:09:00,863 [INFO] Activator:177 - !SESSION log4j initialized
+2023-05-15 17:09:12,518 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2023-05-15 17:09:41,575 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2023-05-15 17:09:41,576 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Defaulting to no-operation (NOP) logger implementation
+2023-05-15 17:09:41,577 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2023-05-15 18:38:29,366 [INFO] Activator:176 - 
+
+
+2023-05-15 18:38:29,369 [INFO] Activator:177 - !SESSION log4j initialized
+2023-05-15 18:38:35,389 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2023-05-15 18:38:36,033 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 18:38:36,034 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 18:38:36,037 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 18:38:58,629 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2023-05-15 18:38:58,630 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Defaulting to no-operation (NOP) logger implementation
+2023-05-15 18:38:58,632 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2023-05-15 18:46:27,406 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 18:46:27,407 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 18:46:27,408 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 18:46:27,844 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 18:46:27,845 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 18:46:27,846 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 18:59:21,283 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 18:59:21,284 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 18:59:21,285 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 18:59:21,671 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 18:59:21,674 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 18:59:21,677 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 19:01:39,485 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 19:01:39,486 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 19:01:39,487 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 19:03:18,798 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 19:03:18,799 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 19:03:18,800 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 19:03:19,023 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 19:03:19,024 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 19:03:19,025 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 19:05:47,051 [ERROR] ConfigurationRetriever:142 - IOException on connection: Read timed out
+2023-05-15 19:05:52,583 [ERROR] ConfigurationRetriever:142 - IOException on connection: Read timed out
+2023-05-15 19:05:58,728 [ERROR] ConfigurationRetriever:142 - IOException on connection: connect timed out
+2023-05-15 19:07:07,091 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 19:07:07,091 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 19:07:07,092 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 19:07:07,147 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 19:07:07,149 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 19:07:07,149 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 19:08:43,335 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 19:08:43,337 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 19:08:43,338 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 19:09:31,479 [ERROR] ConfigurationRetriever:142 - IOException on connection: Read timed out
+2023-05-15 19:09:33,483 [ERROR] ConfigurationRetriever:142 - IOException on connection: connect timed out
+2023-05-15 19:09:35,496 [ERROR] ConfigurationRetriever:142 - IOException on connection: connect timed out
+2023-05-15 19:09:38,592 [ERROR] ConfigurationRetriever:142 - IOException on connection: Read timed out
+2023-05-15 19:09:42,462 [ERROR] ConfigurationRetriever:142 - IOException on connection: Read timed out
+2023-05-15 19:16:12,596 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 19:16:12,599 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 19:16:12,602 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 19:16:12,788 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 19:16:12,789 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 19:16:12,791 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 19:18:01,637 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 19:18:01,638 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 19:18:01,638 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 19:18:01,903 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 19:18:01,904 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 19:18:01,905 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 19:21:59,012 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 19:21:59,012 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 19:21:59,018 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 19:21:59,324 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 19:21:59,326 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 19:21:59,327 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 19:22:57,920 [ERROR] ConfigurationRetriever:142 - IOException on connection: Read timed out
+2023-05-15 19:23:00,988 [ERROR] ConfigurationRetriever:142 - IOException on connection: Read timed out
+2023-05-15 19:23:05,646 [ERROR] ConfigurationRetriever:142 - IOException on connection: Read timed out
+2023-05-15 19:23:08,516 [ERROR] ConfigurationRetriever:142 - IOException on connection: Read timed out
+2023-05-15 21:17:08,235 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 21:17:08,236 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 21:17:08,237 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 21:17:08,274 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 21:17:08,275 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 21:17:08,276 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-05-15 21:17:42,836 [ERROR] ConfigurationRetriever:142 - IOException on connection: connect timed out
+2023-05-15 21:17:46,603 [ERROR] ConfigurationRetriever:142 - IOException on connection: Read timed out
+2023-05-15 21:17:48,648 [ERROR] ConfigurationRetriever:142 - IOException on connection: connect timed out
+2023-05-15 21:17:50,662 [ERROR] ConfigurationRetriever:142 - IOException on connection: connect timed out
+2023-05-15 21:17:52,677 [ERROR] ConfigurationRetriever:142 - IOException on connection: connect timed out
+2023-05-15 21:24:36,332 [ERROR] ConfigurationRetriever:142 - IOException on connection: Read timed out
+2023-05-15 21:24:40,536 [ERROR] AdobePublisher:162 - Exception while opening the connection: java.net.SocketTimeoutException: Read timed out
