@@ -1,0 +1,16 @@
+19:15:18 **** Build of configuration Debug for project matrixx ****
+make -j4 all 
+arm-none-eabi-gcc -o "matrixx.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\User\STM32CubeIDE\matrixx\STM32F302R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="matrixx.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: matrixx.elf
+ 
+arm-none-eabi-size   matrixx.elf 
+arm-none-eabi-objdump -h -S  matrixx.elf  > "matrixx.list"
+   text	   data	    bss	    dec	    hex	filename
+  10148	     20	   1708	  11876	   2e64	matrixx.elf
+Finished building: default.size.stdout
+ 
+Finished building: matrixx.list
+ 
+
+19:15:19 Build Finished. 0 errors, 0 warnings. (took 837ms)
+

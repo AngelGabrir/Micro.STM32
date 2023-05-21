@@ -1,0 +1,21 @@
+19:14:06 **** Incremental Build of configuration Debug for project matriz led ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/dotmatrix_8x8.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F302x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/dotmatrix_8x8.d" -MT"Core/Src/dotmatrix_8x8.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/dotmatrix_8x8.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F302x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/dotmatrix_8x8.c:1:
+../Core/Inc/dotmatrix_8x8.h:4:10: fatal error: stm32l0xx_hal.h: No such file or directory
+    4 | #include "stm32l0xx_hal.h"
+      |          ^~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Core/Src/subdir.mk:37: Core/Src/dotmatrix_8x8.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from ../Core/Src/main.c:24:
+../Core/Inc/dotmatrix_8x8.h:4:10: fatal error: stm32l0xx_hal.h: No such file or directory
+    4 | #include "stm32l0xx_hal.h"
+      |          ^~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+
+19:14:06 Build Failed. 5 errors, 0 warnings. (took 437ms)
+
