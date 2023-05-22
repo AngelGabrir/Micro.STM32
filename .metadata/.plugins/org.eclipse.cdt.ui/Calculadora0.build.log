@@ -1,0 +1,10 @@
+00:05:39 **** Incremental Build of configuration Debug for project Calculadora0 ****
+make -j4 all 
+arm-none-eabi-size   Calculadora0.elf 
+   text	   data	    bss	    dec	    hex	filename
+  18056	   1136	   2040	  21232	   52f0	Calculadora0.elf
+Finished building: default.size.stdout
+ 
+
+00:05:39 Build Finished. 0 errors, 0 warnings. (took 281ms)
+

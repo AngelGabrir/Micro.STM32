@@ -1,0 +1,7 @@
+main.c:63:6:intToDecimalString	6
+main.c:101:5:stringToInteger	5
+main.c:133:5:main	27
+main.c:401:6:SystemClock_Config	4
+main.c:449:13:MX_I2C1_Init	4
+main.c:497:13:MX_GPIO_Init	1
+main.c:562:6:Error_Handler	1

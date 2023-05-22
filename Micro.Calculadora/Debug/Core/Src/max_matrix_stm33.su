@@ -1,0 +1,12 @@
+../Core/Src/max_matrix_stm33.c:144:6:write_byte	24	static
+../Core/Src/max_matrix_stm33.c:156:6:write_max_cmd	24	static
+../Core/Src/max_matrix_stm33.c:169:6:setled	32	static
+../Core/Src/max_matrix_stm33.c:194:6:setrow	40	static
+../Core/Src/max_matrix_stm33.c:223:6:write_char	32	static
+../Core/Src/max_matrix_stm33.c:238:6:scroll_char	48	static
+../Core/Src/max_matrix_stm33.c:275:6:shift_char	32	static
+../Core/Src/max_matrix_stm33.c:307:6:scroll_string	24	static
+../Core/Src/max_matrix_stm33.c:318:6:max_clear	16	static
+../Core/Src/max_matrix_stm33.c:332:6:shiftleft	24	static
+../Core/Src/max_matrix_stm33.c:350:6:shiftright	24	static
+../Core/Src/max_matrix_stm33.c:370:6:max_init	16	static

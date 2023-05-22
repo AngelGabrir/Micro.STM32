@@ -22,6 +22,8 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "i2c-lcd.h"
+#include "max_matrix_stm32.h"
+#include "stdio.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -33,29 +35,7 @@
 /* USER CODE BEGIN PD */
 
 /* USER CODE END PD */
-#define R1_PORT GPIOA
-#define R1_PIN GPIO_PIN_8
 
-#define R2_PORT GPIOB
-#define R2_PIN GPIO_PIN_10
-
-#define R3_PORT GPIOB
-#define R3_PIN GPIO_PIN_4
-
-#define R4_PORT GPIOB
-#define R4_PIN GPIO_PIN_5
-
-#define C1_PORT GPIOB
-#define C1_PIN GPIO_PIN_3
-
-#define C2_PORT GPIOA
-#define C2_PIN GPIO_PIN_10
-
-#define C3_PORT GPIOA
-#define C3_PIN GPIO_PIN_2
-
-#define C4_PORT GPIOA
-#define C4_PIN GPIO_PIN_3
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
 
@@ -64,20 +44,117 @@
 /* Private variables ---------------------------------------------------------*/
 I2C_HandleTypeDef hi2c1;
 
-/* USER CODE BEGIN PV */
+UART_HandleTypeDef huart1;
 
+/* USER CODE BEGIN PV */
+int number=0,bandera=0,a=0,b=0,reset=0,valor=0,resultado=0,cursor=0;
+char operacion='\0',igual='\0',caracter[16],result[16];
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_I2C1_Init(void);
+static void MX_USART1_UART_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+//Entrada por teclado
+void HAL_GPIO_EXTI_Rising_Callback (uint16_t GPIO_Pin)
+{
+
+valor=(GPIOA->IDR);
+switch(valor)
+{
+case 17:
+	number = ((number * 10) + 1);//concatenacion de los numeros
+
+	break;
+case 33:
+	number = ((number * 10) + 2);
+
+
+	break;
+case 65:
+	number = ((number * 10) + 3);
+
+	break;
+case 129:
+	if (operacion=='\0')
+	{
+		operacion='+';
+	}
+
+	break;
+case 18:
+	number = ((number * 10) + 4);
+
+	break;
+case 34:
+	number = ((number * 10) + 5);
+	break;
+case 66:
+	number = ((number * 10) + 6);
+
+	break;
+case 130:
+
+	if (operacion=='\0')
+	{
+		operacion='-';
+	}
+	break;
+case 20:number = ((number * 10) + 7);
+	break;
+
+case 36:
+	number = ((number * 10) + 8);
+
+
+	break;
+case 68:
+	number = ((number * 10) + 9);
+
+	break;
+case 132:
+	if (operacion=='\0')
+	{
+		operacion='*';
+	}
+	break;
+case 24:
+	if (operacion>=42&&operacion<=47)
+	{
+		igual='=';
+	}
+	break;
+case 40:
+	number = ((number * 10) + 0);
+
+	break;
+case 72:
+	if (igual=='=') {
+		reset=1;
+	}
+
+	break;
+case 136:
+	if (operacion=='\0')
+	{
+		operacion='/';
+	}
+	break;
+}
+
+
+//idea para evitar el rebote en prueba aun xd
+/*while((GPIOB->IDR)>=16){
+
+	  }*/
+}
 
 /* USER CODE END 0 */
 
@@ -110,17 +187,126 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_I2C1_Init();
+  MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
-
+  lcd_init();
+  max_init(0x02);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	  //impresion de los valores de a y b
+	 	  // y anulacion del rebote
+	 	  if (valor!=0) {
+	 		HAL_Delay(500);
+	 		sprintf(caracter, "%i", number);
+	 		lcd_put_cur(0,cursor);
+	 		lcd_send_string(caracter);
+	 		valor=0;
+	 	}
+	 	  //cambio de a y b
+	 	  if ((operacion>=42&&operacion<=47)&&bandera==0)
+	 	  {
+	 		bandera=1;
+	 		number=0;
+	 		for (int var = 0; var < 16; ++var)//movimiento del cursor
+	 		{
+	 			if(caracter[var]!='\0')
+	 			{
+	 				cursor++;
+	 			}
+	 			else{
+	 				break;
+	 			}
+	 		}
+	 		for (int var = 0; var < 16; ++var)//limpiando el array del valor del numero
+	 			{
+	 				if(caracter[var]!='\0')
+	 				{
+	 					caracter[var]='\0';
+	 				}
+	 				else
+	 				{
+	 					break;
+	 				}
+	 			}
+	 		//imprimiendo en la matrix led
+	 		write_char(operacion,1);
+	 		lcd_put_cur(0,cursor);
+	 		lcd_send_data(operacion);
+	 		cursor++;
+	 	  }
+	 	  if(bandera==0){//igualando a, a al numero entrante
+	 		  a=number;
+	 	  }
+	 	  else if(igual=='\0')//igualando a, b al numero entrante
+	 	  {
+	 		  b=number;
+	 	  }
+	 	  if (reset==1)//Reiniciando el programa
+	 	  {
+	 		reset=0;
+	 		a=0;
+	 		b=0;
+	 		number=0;
+	 		operacion='\0';
+	 		igual='\0';
+	 		cursor=0;
+	 		bandera=0;
+	 		lcd_clear();
+	 		max_clear();
+	 	  }
+
+	 	  if(igual=='='){//realizando operacion
+
+	 	  switch (operacion) {
+	 		case '+':
+	 			resultado=a+b;
+	 			break;
+	 		case '-':
+	 			resultado=a-b;
+	 			break;
+	 		case '*':
+	 			resultado=a*b;
+	 			break;
+	 		case '/':
+	 			resultado=a/b;
+	 			break;
+	 		default:
+	 			break;
+	 	}
+	 	  //imprimiendo resultado
+	 	  lcd_put_cur(1,0);
+	 	  lcd_send_data('=');
+	 	  sprintf(result, "%i", resultado);
+	 	  lcd_put_cur(1,1);
+	 	  lcd_send_string(result);
+	 	  }
+
+	 	 //Multiplexacion del keypad
+	 	 	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_10, 1);
+	 	 	  HAL_Delay(10);
+	 	 	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_10, 0);
+
+	 	 	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_4, 1);
+	 	 	  HAL_Delay(10);
+	 	 	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_4, 0);
+
+	 	 	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5, 1);
+	 	 	  HAL_Delay(10);
+	 	 	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5, 0);
+
+	 	 	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_3, 1);
+	 	 	  HAL_Delay(10);
+	 	 	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_3, 0);
+
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+
   }
   /* USER CODE END 3 */
 }
@@ -139,7 +325,7 @@ void SystemClock_Config(void)
   * in the RCC_OscInitTypeDef structure.
   */
   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI|RCC_OSCILLATORTYPE_HSE;
-  RCC_OscInitStruct.HSEState = RCC_HSE_ON;
+  RCC_OscInitStruct.HSEState = RCC_HSE_BYPASS;
   RCC_OscInitStruct.HSEPredivValue = RCC_HSE_PREDIV_DIV1;
   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
@@ -164,7 +350,8 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
-  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_I2C1;
+  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USART1|RCC_PERIPHCLK_I2C1;
+  PeriphClkInit.Usart1ClockSelection = RCC_USART1CLKSOURCE_PCLK1;
   PeriphClkInit.I2c1ClockSelection = RCC_I2C1CLKSOURCE_HSI;
   if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
   {
@@ -221,6 +408,41 @@ static void MX_I2C1_Init(void)
 }
 
 /**
+  * @brief USART1 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_USART1_UART_Init(void)
+{
+
+  /* USER CODE BEGIN USART1_Init 0 */
+
+  /* USER CODE END USART1_Init 0 */
+
+  /* USER CODE BEGIN USART1_Init 1 */
+
+  /* USER CODE END USART1_Init 1 */
+  huart1.Instance = USART1;
+  huart1.Init.BaudRate = 38400;
+  huart1.Init.WordLength = UART_WORDLENGTH_8B;
+  huart1.Init.StopBits = UART_STOPBITS_1;
+  huart1.Init.Parity = UART_PARITY_NONE;
+  huart1.Init.Mode = UART_MODE_TX_RX;
+  huart1.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+  huart1.Init.OverSampling = UART_OVERSAMPLING_16;
+  huart1.Init.OneBitSampling = UART_ONE_BIT_SAMPLE_DISABLE;
+  huart1.AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_NO_INIT;
+  if (HAL_UART_Init(&huart1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN USART1_Init 2 */
+
+  /* USER CODE END USART1_Init 2 */
+
+}
+
+/**
   * @brief GPIO Initialization Function
   * @param None
   * @retval None
@@ -232,37 +454,25 @@ static void MX_GPIO_Init(void)
 /* USER CODE END MX_GPIO_Init_1 */
 
   /* GPIO Ports Clock Enable */
+  __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOF_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_2|GPIO_PIN_3|GPIO_PIN_10, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_10|GPIO_PIN_14|GPIO_PIN_15|GPIO_PIN_3
+                          |GPIO_PIN_4|GPIO_PIN_5|GPIO_PIN_6, GPIO_PIN_RESET);
 
-  /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_3, GPIO_PIN_RESET);
-
-  /*Configure GPIO pins : PA2 PA3 PA10 */
-  GPIO_InitStruct.Pin = GPIO_PIN_2|GPIO_PIN_3|GPIO_PIN_10;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
-
-  /*Configure GPIO pins : PB10 PB4 PB5 */
-  GPIO_InitStruct.Pin = GPIO_PIN_10|GPIO_PIN_4|GPIO_PIN_5;
-  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
-
-  /*Configure GPIO pin : PA8 */
-  GPIO_InitStruct.Pin = GPIO_PIN_8;
-  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  /*Configure GPIO pins : PA2 PA3 PA8 PA10 */
+  GPIO_InitStruct.Pin = GPIO_PIN_2|GPIO_PIN_3|GPIO_PIN_8|GPIO_PIN_10;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : PB3 */
-  GPIO_InitStruct.Pin = GPIO_PIN_3;
+  /*Configure GPIO pins : PB10 PB14 PB15 PB3
+                           PB4 PB5 PB6 */
+  GPIO_InitStruct.Pin = GPIO_PIN_10|GPIO_PIN_14|GPIO_PIN_15|GPIO_PIN_3
+                          |GPIO_PIN_4|GPIO_PIN_5|GPIO_PIN_6;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
