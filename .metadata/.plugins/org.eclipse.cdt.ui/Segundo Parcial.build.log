@@ -1,0 +1,10 @@
+01:52:01 **** Incremental Build of configuration Debug for project Segundo Parcial ****
+make -j4 all 
+arm-none-eabi-size   Segundo\ Parcial.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31308	    140	   2580	  34028	   84ec	Segundo Parcial.elf
+Finished building: default.size.stdout
+ 
+
+01:52:02 Build Finished. 0 errors, 0 warnings. (took 293ms)
+

@@ -1,0 +1,47 @@
+2023-07-13 00:46:19,012 [INFO] Gpio:273 - dependency for GPIO [ADC1, DAC, RCC, SYS, TIM2, USART2]
+2023-07-13 00:49:31,625 [INFO] Gpio:273 - dependency for GPIO [ADC1, DAC, RCC, SYS, TIM2, USART2]
+2023-07-13 00:49:32,707 [INFO] Gpio:273 - dependency for GPIO [ADC1, DAC, RCC, SYS, TIM2, USART2]
+2023-07-13 00:49:44,710 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 546597544 Bytes (674234368)
+2023-07-13 00:49:45,002 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 561225728 Bytes (674234368)
+2023-07-13 00:49:47,015 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2023-07-13 00:49:47,016 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2023-07-13 00:49:47,016 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: DMA
+2023-07-13 00:49:47,016 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8F3
+2023-07-13 00:49:47,016 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8F3
+2023-07-13 00:49:47,016 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: DAC
+2023-07-13 00:49:47,016 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2023-07-13 00:49:47,017 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2023-07-13 00:49:47,017 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: ADC
+2023-07-13 00:49:47,017 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2023-07-13 00:49:47,019 [INFO] CodeGenerator:793 - code generatio: config db path: C:\ST\STM32CubeIDE_1.12.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.8.1.202304191431\\db\
+2023-07-13 00:49:48,438 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\User\STM32CubeIDE\workspace_1.12.1\osciloscopio final\osciloscopio final\MXTmpFiles\license.tmp_save
+2023-07-13 00:49:49,683 [INFO] CodeEngine:279 - Generated code: C:\Users\User\STM32CubeIDE\workspace_1.12.1\osciloscopio final\osciloscopio final\MXTmpFiles\license.tmp
+2023-07-13 00:49:50,108 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\User\STM32CubeIDE\workspace_1.12.1\osciloscopio final\osciloscopio final\MXTmpFiles\gpio.tmp_save
+2023-07-13 00:49:50,515 [INFO] CodeEngine:279 - Generated code: C:\Users\User\STM32CubeIDE\workspace_1.12.1\osciloscopio final\osciloscopio final\MXTmpFiles\gpio.tmp
+2023-07-13 00:49:52,185 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\User\STM32CubeIDE\workspace_1.12.1\osciloscopio final\osciloscopio final\MXTmpFiles\dma.tmp_save
+2023-07-13 00:49:53,005 [INFO] CodeEngine:279 - Generated code: C:\Users\User\STM32CubeIDE\workspace_1.12.1\osciloscopio final\osciloscopio final\MXTmpFiles\dma.tmp
+2023-07-13 00:49:53,048 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\User\STM32CubeIDE\workspace_1.12.1\osciloscopio final\osciloscopio final\MXTmpFiles\dma_GV.tmp_save
+2023-07-13 00:49:53,297 [INFO] CodeEngine:279 - Generated code: C:\Users\User\STM32CubeIDE\workspace_1.12.1\osciloscopio final\osciloscopio final\MXTmpFiles\dma_GV.tmp
+2023-07-13 00:49:53,511 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\User\STM32CubeIDE\workspace_1.12.1\osciloscopio final\osciloscopio final\Core\Src\stm32f3xx_it.c_save
+2023-07-13 00:49:53,806 [INFO] CodeEngine:279 - Generated code: C:\Users\User\STM32CubeIDE\workspace_1.12.1\osciloscopio final\osciloscopio final\Core\Src\stm32f3xx_it.c
+2023-07-13 00:49:53,827 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\User\STM32CubeIDE\workspace_1.12.1\osciloscopio final\osciloscopio final\Core\Inc\stm32f3xx_it.h_save
+2023-07-13 00:49:53,991 [INFO] CodeEngine:279 - Generated code: C:\Users\User\STM32CubeIDE\workspace_1.12.1\osciloscopio final\osciloscopio final\Core\Inc\stm32f3xx_it.h
+2023-07-13 00:49:54,037 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\User\STM32CubeIDE\workspace_1.12.1\osciloscopio final\osciloscopio final\Core\Src\stm32f3xx_hal_msp.c_save
+2023-07-13 00:49:54,469 [INFO] CodeEngine:279 - Generated code: C:\Users\User\STM32CubeIDE\workspace_1.12.1\osciloscopio final\osciloscopio final\Core\Src\stm32f3xx_hal_msp.c
+2023-07-13 00:49:54,486 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\User\STM32CubeIDE\workspace_1.12.1\osciloscopio final\osciloscopio final\MXTmpFiles\system.tmp_save
+2023-07-13 00:49:54,634 [INFO] CodeEngine:279 - Generated code: C:\Users\User\STM32CubeIDE\workspace_1.12.1\osciloscopio final\osciloscopio final\MXTmpFiles\system.tmp
+2023-07-13 00:49:54,709 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\User\STM32CubeIDE\workspace_1.12.1\osciloscopio final\osciloscopio final\Core\Inc\stm32f3xx_hal_conf.h_save
+2023-07-13 00:49:54,882 [INFO] CodeEngine:335 - Generated code: C:\Users\User\STM32CubeIDE\workspace_1.12.1\osciloscopio final\osciloscopio final\Core\Inc\stm32f3xx_hal_conf.h
+2023-07-13 00:49:55,020 [WARN] IPConfigManager:3431 - IP not found : TIM
+2023-07-13 00:49:55,023 [WARN] CodeGenerator:3754 - IP not found : null
+2023-07-13 00:49:55,064 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\User\STM32CubeIDE\workspace_1.12.1\osciloscopio final\osciloscopio final\Core\Inc\main.h_save
+2023-07-13 00:49:55,320 [INFO] CodeEngine:279 - Generated code: C:\Users\User\STM32CubeIDE\workspace_1.12.1\osciloscopio final\osciloscopio final\Core\Inc\main.h
+2023-07-13 00:49:55,350 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\User\STM32CubeIDE\workspace_1.12.1\osciloscopio final\osciloscopio final\Core\Src\main.c_save
+2023-07-13 00:49:55,828 [INFO] CodeEngine:279 - Generated code: C:\Users\User\STM32CubeIDE\workspace_1.12.1\osciloscopio final\osciloscopio final\Core\Src\main.c
+2023-07-13 00:49:57,805 [INFO] ProjectBuilder:2996 - Time for Copy HAL[1] : 417mS.
+2023-07-13 00:49:57,917 [INFO] ProjectBuilder:4304 - Project Generator version: 3.19.2
+2023-07-13 00:49:58,761 [INFO] ConfigFileManager:1483 - The Die is : DIE439
+2023-07-13 00:49:58,788 [INFO] ApiDbMcu:507 - Load IP Config File for FATFS
+2023-07-13 00:49:58,810 [INFO] ApiDbMcu:507 - Load IP Config File for FREERTOS
+2023-07-13 00:49:58,850 [INFO] ApiDbMcu:507 - Load IP Config File for TOUCHSENSING
+2023-07-13 00:49:58,894 [INFO] ApiDbMcu:507 - Load IP Config File for USB_DEVICE

@@ -1,0 +1,13 @@
+main.c:86:6:button	2
+main.c:93:6:HAL_TIM_IC_CaptureCallback	4
+main.c:105:6:HAL_TIM_PeriodElapsedCallback	4
+main.c:134:6:calcsin	1
+main.c:173:5:main	21
+main.c:435:7:SystemClock_Config	4
+main.c:479:14:MX_DAC_Init	3
+main.c:516:14:MX_TIM2_Init	3
+main.c:563:14:MX_TIM15_Init	4
+main.c:606:14:MX_USART2_UART_Init	2
+main.c:637:14:MX_DMA_Init	1
+main.c:654:14:MX_GPIO_Init	1
+main.c:701:7:Error_Handler	1

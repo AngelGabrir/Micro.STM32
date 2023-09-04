@@ -1,10 +1,10 @@
-03:15:17 **** Build of configuration Debug for project Pulsador ****
+12:53:38 **** Incremental Build of configuration Debug for project Pulsador ****
 make -j4 all 
 arm-none-eabi-size   Pulsador.elf 
    text	   data	    bss	    dec	    hex	filename
-   8120	     20	   1572	   9712	   25f0	Pulsador.elf
+   8036	     20	   1572	   9628	   259c	Pulsador.elf
 Finished building: default.size.stdout
  
 
-03:15:17 Build Finished. 0 errors, 0 warnings. (took 290ms)
+12:53:39 Build Finished. 0 errors, 0 warnings. (took 288ms)
 

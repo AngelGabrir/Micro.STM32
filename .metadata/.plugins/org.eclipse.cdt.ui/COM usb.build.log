@@ -1,0 +1,10 @@
+10:18:30 **** Build of configuration Debug for project COM usb ****
+make -j4 all 
+arm-none-eabi-size   COM\ usb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  32916	    392	   6136	  39444	   9a14	COM usb.elf
+Finished building: default.size.stdout
+ 
+
+10:18:30 Build Finished. 0 errors, 0 warnings. (took 671ms)
+

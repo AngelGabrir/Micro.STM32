@@ -1,0 +1,10 @@
+10:18:32 **** Build of configuration Debug for project Encoder ****
+make -j4 all 
+arm-none-eabi-size   Encoder.elf 
+   text	   data	    bss	    dec	    hex	filename
+  21384	    120	   2616	  24120	   5e38	Encoder.elf
+Finished building: default.size.stdout
+ 
+
+10:18:32 Build Finished. 0 errors, 0 warnings. (took 543ms)
+

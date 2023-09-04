@@ -1,0 +1,15 @@
+UartRingbuffer_multi.c:36:6:Ringbuf_init	1
+UartRingbuffer_multi.c:52:6:store_char	2
+UartRingbuffer_multi.c:67:5:Look_for	6
+UartRingbuffer_multi.c:94:6:GetDataFromBuffer	10
+UartRingbuffer_multi.c:152:6:Uart_flush	3
+UartRingbuffer_multi.c:167:5:Uart_peek	5
+UartRingbuffer_multi.c:196:5:Uart_read	5
+UartRingbuffer_multi.c:231:6:Uart_write	6
+UartRingbuffer_multi.c:265:5:IsDataAvailable	3
+UartRingbuffer_multi.c:274:5:Get_after	4
+UartRingbuffer_multi.c:286:6:Uart_sendstring	2
+UartRingbuffer_multi.c:291:6:Uart_printbase	5
+UartRingbuffer_multi.c:312:5:Copy_upto	9
+UartRingbuffer_multi.c:348:5:Wait_for	8
+UartRingbuffer_multi.c:379:6:Uart_isr	11

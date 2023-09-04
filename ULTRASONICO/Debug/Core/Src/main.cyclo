@@ -1,0 +1,10 @@
+main.c:65:6:delay	2
+main.c:82:6:HAL_TIM_IC_CaptureCallback	6
+main.c:119:6:HCSR04_Read	1
+main.c:134:5:main	1
+main.c:189:6:SystemClock_Config	4
+main.c:238:13:MX_I2C1_Init	4
+main.c:286:13:MX_TIM1_Init	4
+main.c:336:13:MX_USART2_UART_Init	2
+main.c:371:13:MX_GPIO_Init	1
+main.c:411:6:Error_Handler	1

@@ -1,0 +1,10 @@
+10:18:45 **** Build of configuration Debug for project SD_AUDIO ****
+make -j4 all 
+arm-none-eabi-size   SD_AUDIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13336	     24	   1784	  15144	   3b28	SD_AUDIO.elf
+Finished building: default.size.stdout
+ 
+
+10:18:45 Build Finished. 0 errors, 0 warnings. (took 254ms)
+

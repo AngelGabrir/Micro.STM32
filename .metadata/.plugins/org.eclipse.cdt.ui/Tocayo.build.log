@@ -1,0 +1,10 @@
+10:18:46 **** Incremental Build of configuration Debug for project Tocayo ****
+make -j4 all 
+arm-none-eabi-size   Tocayo.elf 
+   text	   data	    bss	    dec	    hex	filename
+  20772	    124	   5924	  26820	   68c4	Tocayo.elf
+Finished building: default.size.stdout
+ 
+
+10:18:46 Build Finished. 0 errors, 0 warnings. (took 466ms)
+

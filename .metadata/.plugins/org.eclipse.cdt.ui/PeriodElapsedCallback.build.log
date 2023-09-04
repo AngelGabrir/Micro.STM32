@@ -1,0 +1,10 @@
+10:18:43 **** Build of configuration Debug for project PeriodElapsedCallback ****
+make -j4 all 
+arm-none-eabi-size   PeriodElapsedCallback.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12792	     20	   1780	  14592	   3900	PeriodElapsedCallback.elf
+Finished building: default.size.stdout
+ 
+
+10:18:43 Build Finished. 0 errors, 0 warnings. (took 305ms)
+

@@ -15,6 +15,17 @@
   *
   ******************************************************************************
   */
+/******************************************************************************
+                          -----Microcontroladores-----
+
+Nombre: Angel Gabrir Segura V
+
+Matricula: 2021-0311
+
+Asignacion 1
+
+******************************************************************************/
+
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
@@ -178,15 +189,15 @@ HAL_Delay(3000);
 while (1) {
         // Declarar variables y arreglos
         char num1[5];
-            char num2[5];
-            int index1 = 0;
-            int index2 = 0;
-            int result = 0;
-            int input_stage = 1; // Etapa de entrada: 1 para num1, 2 para num2
-            int resta = 0;
-            int suma = 0;
-            int multiplicacion = 0;
-            int division = 0;
+char num2[5];
+int index1 = 0;
+int index2 = 0;
+int result = 0;
+int input_stage = 1; // Etapa de entrada: 1 para num1, 2 para num2
+int resta = 0;
+int suma = 0;
+int multiplicacion = 0;
+int division = 0;
 
 
         // Mostrar mensaje en la pantalla

@@ -1,0 +1,10 @@
+10:18:29 **** Build of configuration Debug for project Audio0 ****
+make -j4 all 
+arm-none-eabi-size   Audio0.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36080	    392	   6272	  42744	   a6f8	Audio0.elf
+Finished building: default.size.stdout
+ 
+
+10:18:29 Build Finished. 0 errors, 0 warnings. (took 568ms)
+

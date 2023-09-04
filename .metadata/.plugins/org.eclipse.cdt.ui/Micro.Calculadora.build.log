@@ -1,45 +1,10 @@
-11:54:35 **** Incremental Build of configuration Debug for project Micro.Calculadora ****
+21:49:21 **** Build of configuration Debug for project Micro.Calculadora ****
 make -j4 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F302x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'stringToInteger':
-../Core/Src/main.c:119:15: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
-  119 |     int len = strlen(str);
-      |               ^~~~~~
-../Core/Src/main.c:119:15: warning: incompatible implicit declaration of built-in function 'strlen'
-../Core/Src/main.c:28:1: note: include '<string.h>' or provide a declaration of 'strlen'
-   27 | #include "stdio.h"
-  +++ |+#include <string.h>
-   28 | 
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:169:17: warning: pointer targets in passing argument 1 of 'scroll_string' differ in signedness [-Wpointer-sign]
-  169 |   scroll_string("Asignacion 1 -- Calculadora   ", 100, left);
-      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      |                 |
-      |                 char *
-In file included from ../Core/Src/main.c:25:
-../Core/Inc/max_matrix_stm32.h:70:30: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
-   70 | void scroll_string (uint8_t *string, uint32_t speed, char direction);
-      |                     ~~~~~~~~~^~~~~~
-../Core/Src/main.c:364:40: warning: pointer targets in passing argument 1 of 'scroll_string' differ in signedness [-Wpointer-sign]
-  364 |                          scroll_string("Vuelva a calcular  ", 100, left);
-      |                                        ^~~~~~~~~~~~~~~~~~~~~
-      |                                        |
-      |                                        char *
-In file included from ../Core/Src/main.c:25:
-../Core/Inc/max_matrix_stm32.h:70:30: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
-   70 | void scroll_string (uint8_t *string, uint32_t speed, char direction);
-      |                     ~~~~~~~~~^~~~~~
-arm-none-eabi-gcc -o "Micro.Calculadora.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\User\STM32CubeIDE\workspace_1.12.1\Micro.Calculadora\STM32F302R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Micro.Calculadora.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Micro.Calculadora.elf
- 
 arm-none-eabi-size   Micro.Calculadora.elf 
-arm-none-eabi-objdump -h -S  Micro.Calculadora.elf  > "Micro.Calculadora.list"
    text	   data	    bss	    dec	    hex	filename
   18692	   1176	   1840	  21708	   54cc	Micro.Calculadora.elf
 Finished building: default.size.stdout
  
-Finished building: Micro.Calculadora.list
- 
 
-11:54:36 Build Finished. 0 errors, 4 warnings. (took 1s.87ms)
+21:49:22 Build Finished. 0 errors, 0 warnings. (took 404ms)
 

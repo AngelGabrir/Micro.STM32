@@ -1,0 +1,10 @@
+10:18:49 **** Build of configuration Debug for project osciloscopio final ****
+make -j4 all 
+arm-none-eabi-size   osciloscopio\ final.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31308	    140	   2580	  34028	   84ec	osciloscopio final.elf
+Finished building: default.size.stdout
+ 
+
+10:18:50 Build Finished. 0 errors, 0 warnings. (took 474ms)
+

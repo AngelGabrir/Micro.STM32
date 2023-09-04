@@ -1,10 +1,10 @@
-03:15:18 **** Build of configuration Debug for project matriz con barrido ****
+10:18:49 **** Build of configuration Debug for project matriz con barrido ****
 make -j4 all 
 arm-none-eabi-size   matriz\ con\ barrido.elf 
    text	   data	    bss	    dec	    hex	filename
-   9144	   1044	   1732	  11920	   2e90	matriz con barrido.elf
+   9144	     68	   1892	  11104	   2b60	matriz con barrido.elf
 Finished building: default.size.stdout
  
 
-03:15:18 Build Finished. 0 errors, 0 warnings. (took 307ms)
+10:18:49 Build Finished. 0 errors, 0 warnings. (took 259ms)
 

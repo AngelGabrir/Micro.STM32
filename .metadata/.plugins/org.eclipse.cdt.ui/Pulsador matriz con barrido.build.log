@@ -1,4 +1,4 @@
-10:26:32 **** Incremental Build of configuration Debug for project Pulsador matriz con barrido ****
+10:18:44 **** Build of configuration Debug for project Pulsador matriz con barrido ****
 make -j4 all 
 arm-none-eabi-size   Pulsador\ matriz\ con\ barrido.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size   Pulsador\ matriz\ con\ barrido.elf
 Finished building: default.size.stdout
  
 
-10:26:32 Build Finished. 0 errors, 0 warnings. (took 242ms)
+10:18:44 Build Finished. 0 errors, 0 warnings. (took 265ms)
 

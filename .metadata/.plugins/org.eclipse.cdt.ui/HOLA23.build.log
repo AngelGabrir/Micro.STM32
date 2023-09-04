@@ -1,0 +1,10 @@
+00:12:08 **** Build of configuration Debug for project HOLA23 ****
+make -j4 all 
+arm-none-eabi-size   HOLA23.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31164	     28	   2316	  33508	   82e4	HOLA23.elf
+Finished building: default.size.stdout
+ 
+
+00:12:09 Build Finished. 0 errors, 0 warnings. (took 509ms)
+

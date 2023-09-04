@@ -1,0 +1,15 @@
+main.c:85:6:delay	2
+main.c:95:6:microDelay1	2
+main.c:102:6:step	3
+main.c:122:5:main	1
+main.c:210:6:SystemClock_Config	4
+main.c:255:13:MX_TIM1_Init	4
+main.c:299:13:MX_TIM2_Init	4
+main.c:341:13:MX_USART1_UART_Init	2
+main.c:374:13:MX_USART2_UART_Init	2
+main.c:407:13:MX_GPIO_Init	1
+main.c:482:6:StartServo	5
+main.c:532:6:StartStepper	4
+main.c:568:6:StartInterrumpir	1
+main.c:594:6:HAL_TIM_PeriodElapsedCallback	2
+main.c:610:6:Error_Handler	1

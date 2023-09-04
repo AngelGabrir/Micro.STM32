@@ -1,0 +1,10 @@
+21:48:40 **** Build of configuration Debug for project HC-SR04 ****
+make -j4 all 
+arm-none-eabi-size   HC-SR04.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14096	     20	   1668	  15784	   3da8	HC-SR04.elf
+Finished building: default.size.stdout
+ 
+
+21:48:41 Build Finished. 0 errors, 0 warnings. (took 836ms)
+

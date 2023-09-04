@@ -1,0 +1,12 @@
+max_matrix_stm33.c:145:6:write_byte	2
+max_matrix_stm33.c:157:6:write_max_cmd	2
+max_matrix_stm33.c:170:6:setled	4
+max_matrix_stm33.c:195:6:setrow	4
+max_matrix_stm33.c:224:6:write_char	2
+max_matrix_stm33.c:239:6:scroll_char	7
+max_matrix_stm33.c:276:6:shift_char	5
+max_matrix_stm33.c:308:6:scroll_string	2
+max_matrix_stm33.c:319:6:max_clear	3
+max_matrix_stm33.c:333:6:shiftleft	3
+max_matrix_stm33.c:351:6:shiftright	3
+max_matrix_stm33.c:371:6:max_init	1

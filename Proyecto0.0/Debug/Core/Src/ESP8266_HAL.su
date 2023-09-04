@@ -1,0 +1,6 @@
+../Core/Src/ESP8266_HAL.c:88:6:ESP_Init	104	static
+../Core/Src/ESP8266_HAL.c:148:5:Server_Send	104	static
+../Core/Src/ESP8266_HAL.c:165:6:delay_ms	24	static
+../Core/Src/ESP8266_HAL.c:170:7:generateResponse	32	static
+../Core/Src/ESP8266_HAL.c:220:6:Server_Handle	24	static
+../Core/Src/ESP8266_HAL.c:252:6:Server_Start	80	static
